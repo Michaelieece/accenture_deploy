@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+    <h1>materialize page</h1>
+    <a href="index-bootstrap.html">bootstrap</a>
+    <div class="container">
+    <div class="row">
+       <div class="col s4 m4 l6">
+        <h2>{{data.user.fullName}}</h2>
+        </div>
+        <div class="col s4 m4 l6">
+        <img src={{data.user.photo}}>
+        </div>
+    
+        </div>
+        
+        <br>  
+         <div>      
+        <h2>Which City?{{data.city.name}}</h2>
+        <img src={{data.city.photo}}>      
+       
+        <h2>{{data.city.description}}</h2>
+         </div>
+ 
+       </div>
+       <hr>
+       <div>
+        <h2>{{data.foreignLanguage.language}}</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>Igbo phrase</th>
+                <th>English phrase</th>
+            </tr>
+            {{#data.foreignLanguage.phrases}}
+            <tr>
+                <td>{{this.foreignLanguage}}</td>
+                <td>{{this.englishPhrase}}</td>
+
+            </tr>   
+            {{/data.foreignLanguage.phrases}}     
+        </table>         
+       </div>
+       <hr>
+       <div >   
+        <h2>{{data.favouriteSubjects.Discipline}}</h2>          
+        <table class="table table-bordered">
+            <tr>
+                <th>Subject Name</th>
+                <th>Subject Description</th>
+            </tr>        
+        {{#data.favouriteSubjects.subject}}
+
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.description}}</td>
+
+            </tr>   
+            {{/data.favouriteSubjects.subject}}     
+       
+        </table>
+       </div>
+    </div>
+</div>
+
+</body>
+</html>
